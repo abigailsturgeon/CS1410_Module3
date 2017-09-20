@@ -53,6 +53,8 @@ int main(int argc, char* argv[])
      *  3) "the second house is cheaper"
      *  4) "invalid comparison value there must be a bug"
      */
+
+    // Depending on returned integer, print out results
     switch(comparison)
     {
         case 1:
@@ -72,6 +74,8 @@ int main(int argc, char* argv[])
 }
 
 //   Function Definitions
+
+// Get addresses and prices for houses from user
 struct house InputHouse(void)
 {
     house h;
@@ -87,12 +91,14 @@ struct house InputHouse(void)
     return h;
 }
 
+// Print out house info
 void PrintHouse(int houseNum, struct house h)
 {
     cout << houseNum << " house at " << h.streetNum
     << " " << h.streetName << " for $" << h.price << endl;
 }
 
+// Compare house prices and return comparison integer
 int ComparePrices(struct house h1, struct house h2)
 {
     int i = 0;
